@@ -60,6 +60,16 @@
             letter-spacing: 2px;
         }
 
+        .hero img {
+            width: 140px; /* Ukuran bisa disesuaikan */
+            height: 140px;
+            border-radius: 50%; /* Membuat gambar jadi bulat */
+            object-fit: cover; /* Memastikan gambar tidak gepeng dalam lingkaran */
+            border: 2px solid var(--primary); /* Memberi bingkai cahaya biru */
+            box-shadow: 0 0 20px rgba(0, 242, 255, 0.5); /* Efek glow */
+            margin-bottom: 20px;
+        }
+
         .nav-links {
             display: flex;
             gap: 30px;
@@ -119,11 +129,12 @@
         }
 
         .tagline {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             font-weight: 300;
-            letter-spacing: 3px;
+            letter-spacing: 2px;
             color: var(--primary);
             margin-bottom: 15px;
+            text-transform: uppercase;
         }
 
         .hero p {
@@ -227,7 +238,7 @@
 
         /* MOBILE RESPONSIVE */
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2.8rem; }
+            .hero h1 { font-size: 2.5rem; }
             .nav-links {
                 display: none; /* Hidden by default on mobile */
                 flex-direction: column;
@@ -241,6 +252,17 @@
                 text-align: center;
                 border: 1px solid var(--primary);
             }
+             .tagline { 
+                font-size: 0.75rem; /* Mengecilkan ukuran di HP */
+                letter-spacing: 1px; /* Merapatkan jarak huruf sedikit */
+                white-space: nowrap; /* Memaksa teks tidak turun ke bawah */
+            }
+
+            .hero img {
+                width: 120px;
+                height: 120px;
+            }
+            
             .nav-links.active {
                 display: flex;
             }
